@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "rules": [
+    {
+      "replacement": "ioBroker",
+      "variants": ["io broker", "eio broker", "iobokrer"]
+    }
+  ]
+}

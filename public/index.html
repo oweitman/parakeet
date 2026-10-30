@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parakeet · Live-Transkription</title>
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body><main>
+  <p class="eyebrow">CLIENT → SERVER · CPU / ONNX</p>
+  <h1>Parakeet Live-Transkription</h1>
+  <p>Deutsch, Englisch und weitere Modellsprachen. Das Backend verarbeitet dein Mikrofon-Audio; es wird nicht gespeichert.</p>
+  <div class="controls"><button id="start" disabled>Mikrofon aktivieren</button><button id="stop" disabled>Mikrofon deaktivieren</button><button id="clear">Text löschen</button></div>
+  <p id="status" role="status">Backend wird geprüft …</p>
+  <label class="correction-option"><input id="corrections" type="checkbox" checked disabled> Korrekturwörterbuch anwenden</label>
+  <p id="correction-status" class="note">Wörterbuch wird geprüft …</p>
+  <label for="transcript" id="transcript-label">Transkript mit Wörterbuch <span>· vorläufiger Text kann sich ändern</span></label>
+  <textarea id="transcript" readonly placeholder="Hier erscheint der erkannte Text …"></textarea>
+  <label for="original">Originalerkennung <span>· unveränderte Modellausgabe zum Vergleich</span></label>
+  <textarea id="original" readonly placeholder="Hier erscheint die unkorrigierte Modellausgabe …"></textarea>
+  <p id="metrics">Noch keine Messung.</p>
+  <p class="note">Beim Deaktivieren wird verbleibendes Audio noch verarbeitet. Ziel: erste Aktualisierung nach etwa 1–3 Sekunden, abhängig von CPU und Auslastung.</p>
+</main></body>
+</html>
